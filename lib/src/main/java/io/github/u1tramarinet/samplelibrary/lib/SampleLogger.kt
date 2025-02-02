@@ -3,7 +3,7 @@ package io.github.u1tramarinet.samplelibrary.lib
 import android.util.Log
 
 /**
- * サンプルのログクラス.
+ * サンプルログクラス.
  */
 object SampleLogger {
     /**

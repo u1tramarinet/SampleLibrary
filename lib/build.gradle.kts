@@ -1,4 +1,3 @@
-import com.android.build.gradle.internal.api.LibraryVariantOutputImpl
 import java.util.Properties
 
 plugins {
@@ -50,16 +49,6 @@ android {
         singleVariant("release") {
             withJavadocJar()
             withSourcesJar()
-        }
-    }
-
-    libraryVariants.forEach { variant ->
-        if (variant.name.contains("testFixtures")) {
-            variant.outputs.forEach { output ->
-                if (output is LibraryVariantOutputImpl) {
-                    output.outputFileName = "testFixtures"
-                }
-            }
         }
     }
 }

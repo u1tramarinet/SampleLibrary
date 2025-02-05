@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "io.github.u1tramarinet.samplelibrary.lib"
+    namespace = "io.github.u1tramarinet.samplelibrary.lib2"
     compileSdk = 35
 
     defaultConfig {
@@ -16,13 +16,11 @@ android {
             minCompileSdk = 28
         }
 
-        version = "0.0.2"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
 
-    base.archivesName = "sample-library"
+    base.archivesName = "sample-library2"
 
     buildTypes {
         release {
@@ -40,11 +38,6 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-    @Suppress("UnstableApiUsage")
-    testFixtures {
-        enable = true
-        androidResources = true
-    }
     publishing {
         singleVariant("release") {
             withJavadocJar()
@@ -57,8 +50,8 @@ publishing {
     publications {
         register<MavenPublication>("gpr") {
             groupId = "io.github.u1tramarinet"
-            artifactId = "sample-library"
-            version = "0.0.2"
+            artifactId = "sample-library2"
+            version = "0.0.1"
 
             afterEvaluate {
                 from(components["release"])
@@ -96,7 +89,6 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)
-    testFixturesImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }

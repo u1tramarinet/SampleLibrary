@@ -26,3 +26,4 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 rootProject.name = "SampleLibrary"
 include(":app")
 include(":lib")
+include(":lib2")
